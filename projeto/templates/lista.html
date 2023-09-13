@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Lista de Doadores</title>
+    </head>
+    <body>
+        <h1>Lista de Doadores</h1>
+        <hr>
+        <table border="4">
+            <tr>
+                <td>RG</td>
+                <td>Nome</td>
+                <td>CPF</td>
+                <td>Endereço</td>
+                <td>E-mail</td>
+                <td>Telefone</td>
+                <td>Carteira do SUS</td>
+                <td>Excluir</td>
+                <td>Atualizar</td>
+            </tr>
+            {% for doador in doadores %}
+            <tr>
+                <td>{{ doador._id }}</td>
+                <td>{{ doador.nome }}</td>
+                <td>{{ doador.cpf }}</td>
+                <td>{{ doador.endereco }}</td>
+                <td>{{ doador.email }}</td>
+                <td>{{ doador.telefone }}</td>
+                <td>{{ doador.numCarteira }}</td>
+                <td><a href="/excluir/{{ doador._id }}">X</a></td>
+                <td><a href="/atualizar/{{ doador._id }}">Atualizar</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="/index">Voltar</a>
+    </body>
+</html>
