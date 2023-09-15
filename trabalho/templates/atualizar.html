@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/atualizar.css')}}">
+        <title>Atualizar</title>
+    </head>
+    <body>
+        <h1>Atualizar</h1>
+        <div class="forma">
+            <form method="POST">
+                <table>
+                    <tr>
+                        <td>Nome</td>
+                        <td><input type="text" name="nome" value="{{ doador.nome }}"></td>
+                    </tr>
+                    <tr>
+                        <td>Endereço</td>
+                        <td><input type="text" name="endereco" value="{{ doador.endereco }}"></td>
+                    </tr>
+                    <tr>
+                        <td>E-mail</td>
+                        <td><input type="text" name="email" value="{{ doador.email }}"></td>
+                    </tr>
+                    <tr>
+                        <td>Telefone</td>
+                        <td><input type="text" name="telefone" value="{{ doador.telefone }}"></td>
+                    </table><br>
+                <input type="submit" value="Atualizar Dados">
+            </form>
+            <a href="/index">Voltar</a>
+        </div>
+    </body>
+</html>

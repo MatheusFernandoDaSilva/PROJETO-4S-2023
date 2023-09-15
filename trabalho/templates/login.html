@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/cadastro.css')}}">
+        <title>Página de Cadastro</title>
+    </head>
+    <body>
+        <h1>Página de Cadastro</h1>
+        <div class="forma">
+            <form action="{{ url_for('cadastro')}}" method="POST">
+                <table>
+                    <tr>
+                        <td>E-mail</td>
+                        <td><input type="text" name="email"></td>
+                    </tr>
+                    <tr>
+                        <td>Senha</td>
+                        <td><input type="password" name="cpf"></td>
+                    </tr>
+                </table><br>
+                <button type="submit">Cadastrar</button>
+            </form>
+        <a href="/index">Voltar</a>
+        </div>
+    </body>
+</html>
