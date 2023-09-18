@@ -9,15 +9,23 @@
             body {
                 background-image: url('static/img/fg240607.jpg');
                 background-size: cover;
+                font-family: "Roboto", sans-serif;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
             }
         </style>
         <title>Página Inicial</title>
     </head>
     <body>
-        <h1>Seja um doador!</h1>
-        <h2>Cadastre você ou sua empresa para conseguirmos mais</h2>
-        <a href="{{ url_for('login')}}" id="botao">Login</a>
-        <a href="{{ url_for('cadastrar')}}" id="botao">Cadastrar</a><br>
-        <a href="{{ url_for('lista')}}" id="botao">Lista de Doadores</a>
+        <div class="home-pagina">
+            <h1>Seja um doador!</h1>
+            <h2>Cadastre você ou sua empresa para conseguirmos mais apoiadores para a causa.</h2>
+        </div>
+        <div id="forma">
+            <div>
+                <button type="button" class="botao1"><a href="{{ url_for('login')}}">Login</a></button></div>
+            <div>
+                <a href="{{ url_for('lista')}}" class="botao2">Lista de doadores</a></div>
+        </div>        
     </body>
 </html>

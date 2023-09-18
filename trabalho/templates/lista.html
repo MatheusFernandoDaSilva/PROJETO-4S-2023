@@ -8,35 +8,35 @@
         <title>Lista de Doadores</title>
     </head>
     <body>
-        <h1>Lista de Doadores</h1>
         <div class="forma">
-            <table border="4">
-                <tr>
-                    <td>RG</td>
-                    <td>Nome</td>
-                    <td>CPF</td>
-                    <td>Endereço</td>
-                    <td>E-mail</td>
-                    <td>Telefone</td>
-                    <td>Carteira do SUS</td>
-                    <td>Excluir</td>
-                    <td>Atualizar</td>
-                </tr>
-                {% for doador in doadores %}
-                <tr>
-                    <td>{{ doador.id }}</td>
-                    <td>{{ doador.nome }}</td>
-                    <td>{{ doador.cpf }}</td>
-                    <td>{{ doador.endereco }}</td>
-                    <td>{{ doador.email }}</td>
-                    <td>{{ doador.telefone }}</td>
-                    <td>{{ doador.numCarteira }}</td>
-                    <td><a href="/excluir/{{ doador.id }}">X</a></td>
-                    <td><a href="/atualizar/{{ doador.id }}">Atualizar</a></td>
-                </tr>
-                {% endfor %}
-            </table>
+            <h1>Lista de Doadores</h1>
         </div>
-        <a href="/index">Voltar</a>
+        <table class="tabela">
+            <tr>
+                <td>RG</td>
+                <td>Nome</td>
+                <td>CPF</td>
+                <td>Endereço</td>
+                <td>E-mail</td>
+                <td>Telefone</td>
+                <td>Carteira do SUS</td>
+            </tr>
+            {% for doador in doadores %}
+            <tr>
+                <td>{{ doador.id }}</td>
+                <td>{{ doador.nome }}</td>
+                <td>{{ doador.cpf }}</td>
+                <td>{{ doador.endereco }}</td>
+                <td>{{ doador.email }}</td>
+                <td>{{ doador.telefone }}</td>
+                <td>{{ doador.numCarteira }}</td>
+                <td><a href="/excluir/{{ doador.id }}">X</a></td>
+                <td><a href="/atualizar/{{ doador.id }}">Atualizar</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+        <div class="voltar">
+            <a href="/index">Voltar</a>
+        </div>
     </body>
 </html>

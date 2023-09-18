@@ -6,6 +6,52 @@ h2 {
     text-align: center;
 }
 
-#botao {
-    text-align: center;
+.home-pagina {
+    width: 360px;
+    padding: 8% 0 0;
+    margin: auto;
+}
+
+#forma {
+    position: relative;
+    z-index: 1;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+}
+
+.botao1 {
+    outline: 0;
+    background: #4CAF50;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    float: left;
+}
+
+.botao1:hover,.botao:active,.botao:focus {
+    background: #43A047;
+}
+
+.botao2 {
+    outline: 0;
+    background: #4CAF50;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    float: right;
+}
+
+.botao2:hover,.botao:active,.botao:focus {
+    background: #43A047;
 }

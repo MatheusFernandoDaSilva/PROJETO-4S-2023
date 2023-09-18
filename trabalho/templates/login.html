@@ -4,26 +4,21 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/cadastro.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css')}}">
         <title>Página de Cadastro</title>
     </head>
     <body>
-        <h1>Página de Cadastro</h1>
-        <div class="forma">
-            <form action="{{ url_for('cadastro')}}" method="POST">
-                <table>
-                    <tr>
-                        <td>E-mail</td>
-                        <td><input type="text" name="email"></td>
-                    </tr>
-                    <tr>
-                        <td>Senha</td>
-                        <td><input type="password" name="cpf"></td>
-                    </tr>
-                </table><br>
-                <button type="submit">Cadastrar</button>
-            </form>
-        <a href="/index">Voltar</a>
+        <div class="login-pagina"></div>
+            <h1>Página de Cadastro</h1>
+            <div class="forma">
+                <form action="{{ url_for('cadastro')}}" method="POST" class="forma-registro">
+                    <input type="text" name="email" placeholder="E-mail" id="login">
+                    <input type="password" name="senha" placeholder="Senha" id="login">
+                    <button type="submit" class="botao">Login</button>
+                    <p class="mensagem">Ainda não estás registrado? <a href="{{ url_for('cadastrar')}}" id="voltar-cadastrar">Cadastre-se</a></p>
+                    <a href="/index" id="voltar-cadastrar">Voltar</a>
+                </form>
+            </div>
         </div>
     </body>
 </html>
