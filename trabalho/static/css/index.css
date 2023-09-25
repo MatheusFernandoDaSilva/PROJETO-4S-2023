@@ -1,15 +1,18 @@
+.home-pagina {
+    width: 460px;
+    padding: 8% 0 0;
+    margin: auto;
+}
+
 h1 {
     text-align: center;
+    color: #265f07;
+    font-size: 40px;
 }
 
 h2 {
     text-align: center;
-}
-
-.home-pagina {
-    width: 360px;
-    padding: 8% 0 0;
-    margin: auto;
+    color: #265f07;
 }
 
 #forma {
@@ -20,7 +23,15 @@ h2 {
     padding: 45px;
 }
 
-.botao1 {
+#divbotao {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+
+#botao {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
     outline: 0;
     background: #4CAF50;
     width: 100%;
@@ -31,27 +42,10 @@ h2 {
     -webkit-transition: all 0.3 ease;
     transition: all 0.3 ease;
     cursor: pointer;
-    float: left;
+    text-decoration: none;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
-.botao1:hover,.botao:active,.botao:focus {
-    background: #43A047;
-}
-
-.botao2 {
-    outline: 0;
-    background: #4CAF50;
-    width: 100%;
-    border: 0;
-    padding: 15px;
-    color: #FFFFFF;
-    font-size: 14px;
-    -webkit-transition: all 0.3 ease;
-    transition: all 0.3 ease;
-    cursor: pointer;
-    float: right;
-}
-
-.botao2:hover,.botao:active,.botao:focus {
+#botao:hover,#botao:active,#botao:focus {
     background: #43A047;
 }

@@ -8,9 +8,11 @@
         <title>Obrigado!</title>
     </head>
     <body>
-        <div class="forma">
-            <p>Cadastro realizado com sucesso!</p>
-            <a href="{{ url_for('index')}}">Voltar a Página Inicial</a><br>
+        <div class="cdSucesso-pagina">
+            <div class="forma">
+                <p>Cadastro realizado com sucesso!</p>
+                <p class="voltar"></p><a href="{{ url_for('index')}}" class="voltarI">Voltar a Página Inicial</a></p>
+            </div>
         </div>
     </body>
 </html>

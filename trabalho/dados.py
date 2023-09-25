@@ -29,6 +29,7 @@ class Doador(db.Model):
     cpf = db.Column(db.String)
     endereco = db.Column(db.String)
     email = db.Column(db.String)
+    senha = db.Column(db.String)
     telefone = db.Column(db.String)
     numCarteira= db.Column(db.String)
 
@@ -36,11 +37,12 @@ class Doador(db.Model):
 
     #Definindo os dados que serão registrados pelo usuário;
 
-    def __init__(self, nome, cpf, endereco, email, telefone, numCarteira):
+    def __init__(self, nome, cpf, endereco, email, senha, telefone, numCarteira):
         self.nome = nome
         self.cpf = cpf
         self.endereco = endereco
         self.email = email
+        self.senha = senha
         self.telefone = telefone
         self.numCarteira = numCarteira
 
@@ -71,18 +73,20 @@ def cadastrar():
 
 @app.route("/cadastro", methods=['GET', 'POST'])
 def cadastro():
+
+    #Comandos para adicionar os dados no BD;
+
     if request.method == "POST":
         nome = request.form.get("nome")
         cpf = request.form.get("cpf")
         endereco = request.form.get("endereco")
         email = request.form.get("email")
+        senha = request.form.get("senha")
         telefone = request.form.get("telefone")
         numCarteira = request.form.get("numCarteira")
 
-        #Comandos para adicionar os dados no BD;
-
-        if nome and cpf and endereco and email and telefone and numCarteira:
-            d = Doador(nome, cpf, endereco, email, telefone, numCarteira)
+        if nome and cpf and endereco and email and senha and telefone and numCarteira:
+            d = Doador(nome, cpf, endereco, email, senha, telefone, numCarteira)
             db.session.add(d)
             db.session.commit()
 
@@ -94,14 +98,14 @@ def cadastro():
 def cdSucesso():
     return render_template("cdSucesso.html")
 
-##Indo para o arquivo 'lista.html';
+##Indo para o arquivo 'lista.html' onde estará a tabela "doadores";
 
 @app.route("/lista")
 def lista():
     doadores = Doador.query.all()
     return render_template("lista.html", doadores=doadores)
 
-#Usando os comandos GET, POST para excluir dados no BD;
+#Excluindo dados no BD;
 
 @app.route("/excluir/<int:id>")
 def excluir(id):

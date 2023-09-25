@@ -8,7 +8,7 @@
         <title>Lista de Doadores</title>
     </head>
     <body>
-        <div class="forma">
+        <div class="lista-pagina">
             <h1>Lista de Doadores</h1>
         </div>
         <table class="tabela">
@@ -18,6 +18,7 @@
                 <td>CPF</td>
                 <td>Endereço</td>
                 <td>E-mail</td>
+                <td>Senha</td>
                 <td>Telefone</td>
                 <td>Carteira do SUS</td>
             </tr>
@@ -28,15 +29,16 @@
                 <td>{{ doador.cpf }}</td>
                 <td>{{ doador.endereco }}</td>
                 <td>{{ doador.email }}</td>
+                <td>{{ doador.senha }}</td>
                 <td>{{ doador.telefone }}</td>
                 <td>{{ doador.numCarteira }}</td>
-                <td><a href="/excluir/{{ doador.id }}">X</a></td>
+                <td><a href="/excluir/{{ doador.id }}">Excluir</a></td>
                 <td><a href="/atualizar/{{ doador.id }}">Atualizar</a></td>
             </tr>
             {% endfor %}
         </table>
         <div class="voltar">
-            <a href="/index">Voltar</a>
+            <a href="/index" class="botao">Voltar</a>
         </div>
     </body>
 </html>
